@@ -2,8 +2,8 @@
 //  pamservices.h
 //  pamservices
 //
-//  Created by heart on 8/21/2560 BE.
-//
+//  Created by narongrit kanhanoi on 9/8/2560 BE.
+//  Copyright © 2017 pushandmotion.com. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

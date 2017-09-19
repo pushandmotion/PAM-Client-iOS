@@ -14,16 +14,19 @@
 
 
 -(void)trackPageView:(TrackingData*)data{
-    NSDictionary *dict = [data toDictionary];
+    
     NSString *url = [self createEventURL:@"rest/event"];
-    [self postTo:url data:dict];
+    
+    NSLog(@"PAM >> SEND TRACK url=%@ MTC_ID = %@",url,data.mtc_id);
+    
+    [self postTo:url data:[data toDictionary]];
 }
 
 -(NSString*)createEventURL:(NSString*)subfix{
-    if( [[self.PAMUrl substringFromIndex:self.PAMUrl.length-1] isEqualToString:@"/"] ){
-        return [NSString stringWithFormat:@"%@%@",self.PAMUrl,subfix];
+    if( [[self.pamUrl substringFromIndex:self.pamUrl.length-1] isEqualToString:@"/"] ){
+        return [NSString stringWithFormat:@"%@%@",self.pamUrl,subfix];
     }
-    return [NSString stringWithFormat:@"%@/%@",self.PAMUrl,subfix];;
+    return [NSString stringWithFormat:@"%@/%@",self.pamUrl,subfix];;
 }
 
 -(void)onTrackingSuccess:(NSDictionary*)result{
@@ -34,6 +37,7 @@
     if( result[@"id"] != nil ){
         mtc_id = result[@"id"];
         [PAM defaultTrackingData].mtc_id = mtc_id;
+        NSLog(@"PAM >>> Set mtc_id = %@" ,mtc_id );
     }
     
     if( result[@"sid"] != nil ){
@@ -62,6 +66,9 @@
     
     NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithRequest:urlRequest completionHandler:^(NSData *responseData, NSURLResponse *response, NSError *error) {
         
+        NSString* newStr = [NSString stringWithUTF8String:[responseData bytes]];
+        NSLog(@"PAM >>> Track Complete : %@",newStr);
+        
         if(error != nil ){
             NSLog(@"%@", error.localizedDescription );
             return;
@@ -80,14 +87,15 @@
 }
 
 
--(NSString*)postStringFromDictionary:(NSDictionary*)dict{
-    if(dict == nil)return @"";
+-(NSString*)postStringFromDictionary:(NSDictionary*)dictionary{
+    if(dictionary == nil)return @"";
+    
     NSMutableString *postString = [NSMutableString stringWithString:@""];
     
-    NSArray *allKeys = dict.allKeys;
+    NSArray *allKeys = dictionary.allKeys;
     for(int i=0; i<allKeys.count; i++){
-        NSString *k;
-        NSString *v;
+        NSString *k = allKeys[i];
+        NSString *v = dictionary[k];
         [postString appendString:[NSString stringWithFormat:@"%@=%@",k,v]];
         if(i < allKeys.count-1 ){
             [postString appendString:@"&"];

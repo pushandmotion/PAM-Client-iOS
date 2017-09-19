@@ -95,7 +95,7 @@
     
     [dict setObject:[self getFingerPrint] forKey:@"fingerprint"];
     
-    return dict;
+    return [NSDictionary dictionaryWithDictionary:dict];
 }
 
 @end

@@ -8,14 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		3EBD38C71F4AEF5B00D019C0 /* pamservices.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EBD38C51F4AEF5B00D019C0 /* pamservices.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3EE0CC651F4D43290076F62E /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0CC641F4D43290076F62E /* HttpClient.swift */; };
+		3EF48B8C1F7129E4007C094A /* PAM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF48B8B1F7129E4007C094A /* PAM.swift */; };
+		3EF48B8E1F712A0B007C094A /* PAMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF48B8D1F712A0B007C094A /* PAMClient.swift */; };
+		3EF48B901F712A52007C094A /* FingerPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF48B8F1F712A52007C094A /* FingerPrint.swift */; };
+		3EF48B921F712A77007C094A /* TrackingDataBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF48B911F712A77007C094A /* TrackingDataBuilder.swift */; };
+		3EF48B941F712AA0007C094A /* PAMLocalDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF48B931F712AA0007C094A /* PAMLocalDatabase.swift */; };
+		3EF48B961F712AB3007C094A /* TrackingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF48B951F712AB3007C094A /* TrackingData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3EBD38C21F4AEF5B00D019C0 /* pamservices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pamservices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBD38C51F4AEF5B00D019C0 /* pamservices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pamservices.h; sourceTree = "<group>"; };
 		3EBD38C61F4AEF5B00D019C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3EE0CC641F4D43290076F62E /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		3EF48B8B1F7129E4007C094A /* PAM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAM.swift; sourceTree = "<group>"; };
+		3EF48B8D1F712A0B007C094A /* PAMClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMClient.swift; sourceTree = "<group>"; };
+		3EF48B8F1F712A52007C094A /* FingerPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FingerPrint.swift; sourceTree = "<group>"; };
+		3EF48B911F712A77007C094A /* TrackingDataBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingDataBuilder.swift; sourceTree = "<group>"; };
+		3EF48B931F712AA0007C094A /* PAMLocalDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMLocalDatabase.swift; sourceTree = "<group>"; };
+		3EF48B951F712AB3007C094A /* TrackingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,11 +58,32 @@
 		3EBD38C41F4AEF5B00D019C0 /* pamservices */ = {
 			isa = PBXGroup;
 			children = (
-				3EBD38C51F4AEF5B00D019C0 /* pamservices.h */,
+				3EF48B891F7129D0007C094A /* data */,
+				3EF48B8A1F7129D5007C094A /* core */,
 				3EBD38C61F4AEF5B00D019C0 /* Info.plist */,
-				3EE0CC641F4D43290076F62E /* HttpClient.swift */,
+				3EBD38C51F4AEF5B00D019C0 /* pamservices.h */,
+				3EF48B8B1F7129E4007C094A /* PAM.swift */,
 			);
 			path = pamservices;
+			sourceTree = "<group>";
+		};
+		3EF48B891F7129D0007C094A /* data */ = {
+			isa = PBXGroup;
+			children = (
+				3EF48B911F712A77007C094A /* TrackingDataBuilder.swift */,
+				3EF48B931F712AA0007C094A /* PAMLocalDatabase.swift */,
+				3EF48B951F712AB3007C094A /* TrackingData.swift */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		3EF48B8A1F7129D5007C094A /* core */ = {
+			isa = PBXGroup;
+			children = (
+				3EF48B8D1F712A0B007C094A /* PAMClient.swift */,
+				3EF48B8F1F712A52007C094A /* FingerPrint.swift */,
+			);
+			name = core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EE0CC651F4D43290076F62E /* HttpClient.swift in Sources */,
+				3EF48B961F712AB3007C094A /* TrackingData.swift in Sources */,
+				3EF48B921F712A77007C094A /* TrackingDataBuilder.swift in Sources */,
+				3EF48B8C1F7129E4007C094A /* PAM.swift in Sources */,
+				3EF48B901F712A52007C094A /* FingerPrint.swift in Sources */,
+				3EF48B941F712AA0007C094A /* PAMLocalDatabase.swift in Sources */,
+				3EF48B8E1F712A0B007C094A /* PAMClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
