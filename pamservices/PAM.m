@@ -46,6 +46,12 @@
     [[self defaultPAMClient] trackPageView:data];
 }
 
++(void)trackCustomField:(NSDictionary*)customField{
+    TrackingDataBuilder *builder = [self createTackingDataBuilder];
+    builder.page_title = @"custom field";
+    [[self defaultPAMClient] trackCustomField:[builder build] customField:customField];
+}
+
 +(void)init:(NSString*)pamUrl appId:(NSString*)appId{
     
     TrackingDataBuilder *defaultData = [self defaultTrackingData];

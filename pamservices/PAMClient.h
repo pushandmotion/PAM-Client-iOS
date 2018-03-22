@@ -15,6 +15,7 @@
 
 -(void)trackPageView:(TrackingData*)data;
 
+-(void)trackCustomField:(TrackingData*)data customField:(NSDictionary*)customField;
 
 
 @end
