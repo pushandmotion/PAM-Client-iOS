@@ -1,0 +1,6 @@
+framework module pamservices {
+  umbrella header "pamservices.h"
+
+  export *
+  module * { export * }
+}

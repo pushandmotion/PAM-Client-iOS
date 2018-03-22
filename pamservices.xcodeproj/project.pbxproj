@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		3E792269206375EC0004FE75 /* universal framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3E79226C206375EC0004FE75 /* Build configuration list for PBXAggregateTarget "universal framework" */;
+			buildPhases = (
+				3E79226D206375F80004FE75 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "universal framework";
+			productName = "universal framework";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		3EA839A71F70DC590003F985 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA839A61F70DC590003F985 /* libsqlite3.tbd */; };
 		3EA839CC1F70E7C20003F985 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA839CB1F70E7C20003F985 /* UIKit.framework */; };
@@ -167,6 +181,11 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = heart;
 				TargetAttributes = {
+					3E792269206375EC0004FE75 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = G8ZLS2XBNE;
+						ProvisioningStyle = Automatic;
+					};
 					3ECF70581F626FB00086F87A = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 5PN9LL8N5M;
@@ -187,6 +206,7 @@
 			projectRoot = "";
 			targets = (
 				3ECF70581F626FB00086F87A /* pamservices */,
+				3E792269206375EC0004FE75 /* universal framework */,
 			);
 		};
 /* End PBXProject section */
@@ -200,6 +220,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E79226D206375F80004FE75 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n######################\n# On Release, copy the result to release directory\n######################\nOUTPUT_DIR=\"${PROJECT_DIR}/Output/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n\nrm -rf \"$OUTPUT_DIR\"\nmkdir -p \"$OUTPUT_DIR\"\n\ncp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n\nif [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\nopen \"${OUTPUT_DIR}/\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3ECF70541F626FB00086F87A /* Sources */ = {
@@ -218,6 +254,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		3E79226A206375EC0004FE75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8ZLS2XBNE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3E79226B206375EC0004FE75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8ZLS2XBNE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3ECF705F1F626FB00086F87A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -355,6 +409,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3E79226C206375EC0004FE75 /* Build configuration list for PBXAggregateTarget "universal framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E79226A206375EC0004FE75 /* Debug */,
+				3E79226B206375EC0004FE75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3ECF70531F626FB00086F87A /* Build configuration list for PBXProject "pamservices" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
