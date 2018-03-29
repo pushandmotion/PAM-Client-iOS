@@ -7,7 +7,7 @@
 //
 
 
-class TrackingData {
+public class TrackingData {
     
     var page_title:String!
     var page_language:String!
@@ -29,7 +29,7 @@ class TrackingData {
         do_not_track = "false"
     }
     
-    func getFingerPrint() -> String {
+    public func getFingerPrint() -> String {
         var str: String = "\(updfh)\(appId)\(page_language)\(resolution)\(timezone_offset)\(platform)\(adblock)"
         if page_title != nil {
             str = str + (page_title)
@@ -46,7 +46,7 @@ class TrackingData {
         return FingerPrint.from(str)!
     }
     
-    func toDictionary() -> [AnyHashable : Any]! {
+    public func toDictionary() -> [AnyHashable : Any]! {
         var dict = [AnyHashable: Any]()
         dict["app_id"] = appId
         dict["page_language"] = page_language

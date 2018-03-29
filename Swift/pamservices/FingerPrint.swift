@@ -6,8 +6,6 @@
 //  Copyright © 2017 pushandmotion.com. All rights reserved.
 //
 
-import CommonCrypto
-
 class FingerPrint {
     class func from(_ string: String) -> String? {
         return SHA1.hexString(from: string)

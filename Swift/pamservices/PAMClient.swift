@@ -6,7 +6,7 @@
 //  Copyright © 2017 pushandmotion.com. All rights reserved.
 //
 
-class PAMClient {
+public class PAMClient {
     
     var pamUrl:String?
     

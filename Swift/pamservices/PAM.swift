@@ -6,7 +6,7 @@
 //  Copyright © 2017 pushandmotion.com. All rights reserved.
 //
 
-class PAM {
+public class PAM {
     class func defaultTrackingData() -> TrackingDataBuilder {
         var defaultData: TrackingDataBuilder? = nil
         let lockQueue = DispatchQueue(label: "self")
@@ -22,34 +22,34 @@ class PAM {
         return self.defaultTrackingData().clone()
     }
     
-    class func trackUpdfh(_ updfh: String) {
+    public class func trackUpdfh(_ updfh: String) {
         PAMLocalDataBase.getInstance().saveUPDFH(updfh)
         self.defaultTrackingData().updfh = updfh
         self.trackPageView(withPagename: "updfh")
     }
     
-    class func trackPageView(withPagename pageName: String, data: TrackingData) {
+    class public func trackPageView(withPagename pageName: String, data: TrackingData) {
         data.page_title = pageName
         self.defaultPAMClient().trackPageView(data)
     }
     
-    class func trackPageView(withPagename pageName: String) {
+    public class func trackPageView(withPagename pageName: String) {
         let builder: TrackingDataBuilder? = self.createTackingDataBuilder()
         builder?.page_title = pageName
         self.defaultPAMClient().trackPageView(builder!.build())
     }
     
-    class func trackPageView(with data: TrackingData) {
+    public class func trackPageView(with data: TrackingData) {
         self.defaultPAMClient().trackPageView(data)
     }
     
-    class func trackCustomField(cuttomFields:Dictionary<String,String>){
+    public class func trackCustomField(cuttomFields:Dictionary<String,String>){
         let builder: TrackingDataBuilder? = self.createTackingDataBuilder()
         builder?.page_title = "cuttomFields"
         self.defaultPAMClient().trackPageView(builder!.build(), customFields: cuttomFields)
     }
     
-    class func initPam(_ pamUrl: String, appId: String) {
+    public class func initPam(_ pamUrl: String, appId: String) {
         let defaultData: TrackingDataBuilder? = self.defaultTrackingData()
         defaultData?.appId = appId
         defaultData?.counter = 0
@@ -70,7 +70,7 @@ class PAM {
         self.defaultPAMClient().pamUrl = pamUrl
     }
     
-    class func defaultPAMClient() -> PAMClient {
+    public class func defaultPAMClient() -> PAMClient {
         var pam: PAMClient? = nil
         let lockQueue = DispatchQueue(label: "self")
         lockQueue.sync {
