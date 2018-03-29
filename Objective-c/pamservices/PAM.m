@@ -52,7 +52,7 @@
     [[self defaultPAMClient] trackCustomField:[builder build] customField:customField];
 }
 
-+(void)init:(NSString*)pamUrl appId:(NSString*)appId{
++(void)initPam:(NSString*)pamUrl appId:(NSString*)appId{
     
     TrackingDataBuilder *defaultData = [self defaultTrackingData];
     defaultData.appId = appId;

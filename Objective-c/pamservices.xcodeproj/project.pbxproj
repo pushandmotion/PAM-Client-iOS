@@ -6,36 +6,22 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		3E792269206375EC0004FE75 /* universal framework */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 3E79226C206375EC0004FE75 /* Build configuration list for PBXAggregateTarget "universal framework" */;
-			buildPhases = (
-				3E79226D206375F80004FE75 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "universal framework";
-			productName = "universal framework";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
+		3E7922AA20637A020004FE75 /* TrackingDataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF707B1F62704E0086F87A /* TrackingDataBuilder.m */; };
 		3EA839A71F70DC590003F985 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA839A61F70DC590003F985 /* libsqlite3.tbd */; };
 		3EA839CC1F70E7C20003F985 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA839CB1F70E7C20003F985 /* UIKit.framework */; };
 		3ECF705E1F626FB00086F87A /* pamservices.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF705C1F626FB00086F87A /* pamservices.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3ECF70681F626FE50086F87A /* PAM.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF70661F626FE50086F87A /* PAM.h */; };
+		3ECF70681F626FE50086F87A /* PAM.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF70661F626FE50086F87A /* PAM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3ECF70691F626FE50086F87A /* PAM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF70671F626FE50086F87A /* PAM.m */; };
-		3ECF706C1F626FF10086F87A /* TrackingData.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF706A1F626FF10086F87A /* TrackingData.h */; };
+		3ECF706C1F626FF10086F87A /* TrackingData.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF706A1F626FF10086F87A /* TrackingData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3ECF706D1F626FF10086F87A /* TrackingData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF706B1F626FF10086F87A /* TrackingData.m */; };
-		3ECF70701F626FFA0086F87A /* PAMLocalDataBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF706E1F626FFA0086F87A /* PAMLocalDataBase.h */; };
+		3ECF70701F626FFA0086F87A /* PAMLocalDataBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF706E1F626FFA0086F87A /* PAMLocalDataBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3ECF70711F626FFA0086F87A /* PAMLocalDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF706F1F626FFA0086F87A /* PAMLocalDataBase.m */; };
-		3ECF70741F62700A0086F87A /* FingerPrint.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF70721F62700A0086F87A /* FingerPrint.h */; };
+		3ECF70741F62700A0086F87A /* FingerPrint.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF70721F62700A0086F87A /* FingerPrint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3ECF70751F62700A0086F87A /* FingerPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF70731F62700A0086F87A /* FingerPrint.m */; };
-		3ECF70781F6270140086F87A /* PAMClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF70761F6270140086F87A /* PAMClient.h */; };
+		3ECF70781F6270140086F87A /* PAMClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF70761F6270140086F87A /* PAMClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3ECF70791F6270140086F87A /* PAMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF70771F6270140086F87A /* PAMClient.m */; };
-		3ECF707C1F62704E0086F87A /* TrackingDataBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF707A1F62704E0086F87A /* TrackingDataBuilder.h */; };
-		3ECF707D1F62704E0086F87A /* TrackingDataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF707B1F62704E0086F87A /* TrackingDataBuilder.m */; };
+		3ECF707C1F62704E0086F87A /* TrackingDataBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF707A1F62704E0086F87A /* TrackingDataBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -181,14 +167,10 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = heart;
 				TargetAttributes = {
-					3E792269206375EC0004FE75 = {
-						CreatedOnToolsVersion = 9.2;
-						DevelopmentTeam = G8ZLS2XBNE;
-						ProvisioningStyle = Automatic;
-					};
 					3ECF70581F626FB00086F87A = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 5PN9LL8N5M;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -206,7 +188,6 @@
 			projectRoot = "";
 			targets = (
 				3ECF70581F626FB00086F87A /* pamservices */,
-				3E792269206375EC0004FE75 /* universal framework */,
 			);
 		};
 /* End PBXProject section */
@@ -221,22 +202,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		3E79226D206375F80004FE75 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n######################\n# On Release, copy the result to release directory\n######################\nOUTPUT_DIR=\"${PROJECT_DIR}/Output/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n\nrm -rf \"$OUTPUT_DIR\"\nmkdir -p \"$OUTPUT_DIR\"\n\ncp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n\nif [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\nopen \"${OUTPUT_DIR}/\"\nfi";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		3ECF70541F626FB00086F87A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -244,7 +209,7 @@
 			files = (
 				3ECF70751F62700A0086F87A /* FingerPrint.m in Sources */,
 				3ECF706D1F626FF10086F87A /* TrackingData.m in Sources */,
-				3ECF707D1F62704E0086F87A /* TrackingDataBuilder.m in Sources */,
+				3E7922AA20637A020004FE75 /* TrackingDataBuilder.m in Sources */,
 				3ECF70691F626FE50086F87A /* PAM.m in Sources */,
 				3ECF70791F6270140086F87A /* PAMClient.m in Sources */,
 				3ECF70711F626FFA0086F87A /* PAMLocalDataBase.m in Sources */,
@@ -254,24 +219,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3E79226A206375EC0004FE75 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G8ZLS2XBNE;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		3E79226B206375EC0004FE75 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G8ZLS2XBNE;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		3ECF705F1F626FB00086F87A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -373,6 +320,7 @@
 		3ECF70621F626FB00086F87A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5PN9LL8N5M;
@@ -385,12 +333,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pushandmotion.pamservices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		3ECF70631F626FB00086F87A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5PN9LL8N5M;
@@ -403,21 +354,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pushandmotion.pamservices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3E79226C206375EC0004FE75 /* Build configuration list for PBXAggregateTarget "universal framework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3E79226A206375EC0004FE75 /* Debug */,
-				3E79226B206375EC0004FE75 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3ECF70531F626FB00086F87A /* Build configuration list for PBXProject "pamservices" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

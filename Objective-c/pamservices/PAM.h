@@ -12,7 +12,7 @@
 
 @interface PAM : NSObject
 
-+(void)init:(NSString*)pamUrl appId:(NSString*)appId;
++(void)initPam:(NSString*)pamUrl appId:(NSString*)appId;
 
 +(TrackingDataBuilder*)defaultTrackingData;
 +(TrackingDataBuilder*)createTackingDataBuilder;
