@@ -22,6 +22,8 @@
 		3ECF70781F6270140086F87A /* PAMClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF70761F6270140086F87A /* PAMClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3ECF70791F6270140086F87A /* PAMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF70771F6270140086F87A /* PAMClient.m */; };
 		3ECF707C1F62704E0086F87A /* TrackingDataBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECF707A1F62704E0086F87A /* TrackingDataBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ED4BFCF20AD65F6005732B5 /* Form.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ED4BFCD20AD65F6005732B5 /* Form.h */; };
+		3ED4BFD020AD65F6005732B5 /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4BFCE20AD65F6005732B5 /* Form.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		3ECF70771F6270140086F87A /* PAMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAMClient.m; sourceTree = "<group>"; };
 		3ECF707A1F62704E0086F87A /* TrackingDataBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingDataBuilder.h; sourceTree = "<group>"; };
 		3ECF707B1F62704E0086F87A /* TrackingDataBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingDataBuilder.m; sourceTree = "<group>"; };
+		3ED4BFCD20AD65F6005732B5 /* Form.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Form.h; sourceTree = "<group>"; };
+		3ED4BFCE20AD65F6005732B5 /* Form.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Form.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 				3ECF706F1F626FFA0086F87A /* PAMLocalDataBase.m */,
 				3ECF707A1F62704E0086F87A /* TrackingDataBuilder.h */,
 				3ECF707B1F62704E0086F87A /* TrackingDataBuilder.m */,
+				3ED4BFCD20AD65F6005732B5 /* Form.h */,
+				3ED4BFCE20AD65F6005732B5 /* Form.m */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED4BFCF20AD65F6005732B5 /* Form.h in Headers */,
 				3ECF705E1F626FB00086F87A /* pamservices.h in Headers */,
 				3ECF707C1F62704E0086F87A /* TrackingDataBuilder.h in Headers */,
 				3ECF706C1F626FF10086F87A /* TrackingData.h in Headers */,
@@ -211,6 +218,7 @@
 				3ECF706D1F626FF10086F87A /* TrackingData.m in Sources */,
 				3E7922AA20637A020004FE75 /* TrackingDataBuilder.m in Sources */,
 				3ECF70691F626FE50086F87A /* PAM.m in Sources */,
+				3ED4BFD020AD65F6005732B5 /* Form.m in Sources */,
 				3ECF70791F6270140086F87A /* PAMClient.m in Sources */,
 				3ECF70711F626FFA0086F87A /* PAMLocalDataBase.m in Sources */,
 			);

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E0FBD3220689116007C8FD5 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0FBD3120689116007C8FD5 /* SHA1.swift */; };
 		3EBD38C71F4AEF5B00D019C0 /* pamservices.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EBD38C51F4AEF5B00D019C0 /* pamservices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ED4BFD220AD6C1F005732B5 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4BFD120AD6C1F005732B5 /* Form.swift */; };
 		3EF48B8C1F7129E4007C094A /* PAM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF48B8B1F7129E4007C094A /* PAM.swift */; };
 		3EF48B8E1F712A0B007C094A /* PAMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF48B8D1F712A0B007C094A /* PAMClient.swift */; };
 		3EF48B901F712A52007C094A /* FingerPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF48B8F1F712A52007C094A /* FingerPrint.swift */; };
@@ -22,6 +23,7 @@
 		3EBD38C21F4AEF5B00D019C0 /* pamservices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pamservices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBD38C51F4AEF5B00D019C0 /* pamservices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pamservices.h; sourceTree = "<group>"; };
 		3EBD38C61F4AEF5B00D019C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ED4BFD120AD6C1F005732B5 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		3EF48B8B1F7129E4007C094A /* PAM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAM.swift; sourceTree = "<group>"; };
 		3EF48B8D1F712A0B007C094A /* PAMClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMClient.swift; sourceTree = "<group>"; };
 		3EF48B8F1F712A52007C094A /* FingerPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FingerPrint.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				3EF48B911F712A77007C094A /* TrackingDataBuilder.swift */,
 				3EF48B931F712AA0007C094A /* PAMLocalDatabase.swift */,
 				3EF48B951F712AB3007C094A /* TrackingData.swift */,
+				3ED4BFD120AD6C1F005732B5 /* Form.swift */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EF48B961F712AB3007C094A /* TrackingData.swift in Sources */,
+				3ED4BFD220AD6C1F005732B5 /* Form.swift in Sources */,
 				3EF48B921F712A77007C094A /* TrackingDataBuilder.swift in Sources */,
 				3EF48B8C1F7129E4007C094A /* PAM.swift in Sources */,
 				3EF48B901F712A52007C094A /* FingerPrint.swift in Sources */,
