@@ -9,6 +9,7 @@
 #import "PAM.h"
 #import "PAMLocalDataBase.h"
 #import "PAMClient.h"
+#import "Form.h"
 
 @implementation PAM
 
@@ -50,6 +51,12 @@
     TrackingDataBuilder *builder = [self createTackingDataBuilder];
     builder.page_title = @"custom field";
     [[self defaultPAMClient] trackCustomField:[builder build] customField:customField];
+}
+
++(void)submitForm:(Form*)form{
+    TrackingDataBuilder *builder = [self createTackingDataBuilder];
+    builder.page_title = [NSString stringWithFormat:@"%@/submit",form.formId];
+    [[self defaultPAMClient] trackCustomField:[builder build] customField:[form getFormDataAsDictionary]];
 }
 
 +(void)initPam:(NSString*)pamUrl appId:(NSString*)appId{

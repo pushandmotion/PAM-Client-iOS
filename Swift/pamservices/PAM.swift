@@ -49,6 +49,19 @@ public class PAM {
         self.defaultPAMClient().trackPageView(builder!.build(), customFields: cuttomFields)
     }
     
+    public class func submitForm(_ form:Form){
+        let builder: TrackingDataBuilder? = self.createTackingDataBuilder()
+        
+        if let formId = form.formId{
+            builder?.page_title = "\(formId)/submit"
+        }else{
+            builder?.page_title = "submit"
+        }
+        if let formData = form.formData{
+            self.defaultPAMClient().trackPageView(builder!.build(), customFields:formData )
+        }
+    }
+    
     public class func initPam(_ pamUrl: String, appId: String) {
         let defaultData: TrackingDataBuilder? = self.defaultTrackingData()
         defaultData?.appId = appId
