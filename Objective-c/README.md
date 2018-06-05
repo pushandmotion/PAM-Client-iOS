@@ -18,7 +18,12 @@ AppDelegate.m
 ViewController.m
 ```objc
   -(void)viewDidLoad{
-    [PAM trackPageViewWithPagename:"home"];
+     TrackingDataBuilder *builder = [[TrackingDataBuilder alloc] init];
+     builder.page_url = @"appscheme://myscheme/home";
+    
+     TrackingData *data = [builder build];
+    
+     [PAM trackPageViewWithPagename:@"sample application title" data:data];
   }
 ```
 
