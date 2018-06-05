@@ -34,7 +34,13 @@ ViewController.swift
       override func viewDidLoad() {
           super.viewDidLoad()
 
-          PAM.trackPageView(withPagename: "home")
+          var builder = TrackingDataBuilder()
+          data.page_url = "appscheme://myscheme/home"
+        
+          let trackingData = builder.build()!
+          
+          PAM.trackPageView(withPagename:"sample application title", data: trackingData)
+          
       }
   }
 ```
