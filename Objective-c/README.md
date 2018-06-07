@@ -18,7 +18,7 @@ AppDelegate.m
 ViewController.m
 ```objc
   -(void)viewDidLoad{
-     TrackingDataBuilder *builder = [[TrackingDataBuilder alloc] init];
+     TrackingDataBuilder *builder = [PAM createTackingDataBuilder];
      builder.page_url = @"appscheme://myscheme/home";
     
      TrackingData *data = [builder build];
