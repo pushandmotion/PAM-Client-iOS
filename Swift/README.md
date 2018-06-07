@@ -34,7 +34,7 @@ ViewController.swift
       override func viewDidLoad() {
           super.viewDidLoad()
 
-          var builder = TrackingDataBuilder()
+          var builder = PAM.createTackingDataBuilder();
           data.page_url = "appscheme://myscheme/home"
         
           let trackingData = builder.build()!
