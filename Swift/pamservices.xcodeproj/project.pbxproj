@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E0FBD3220689116007C8FD5 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0FBD3120689116007C8FD5 /* SHA1.swift */; };
+		3E667B4F20C8F53B00FF3970 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E667B4E20C8F53B00FF3970 /* Description.swift */; };
 		3EBD38C71F4AEF5B00D019C0 /* pamservices.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EBD38C51F4AEF5B00D019C0 /* pamservices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3ED4BFD220AD6C1F005732B5 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4BFD120AD6C1F005732B5 /* Form.swift */; };
 		3EF48B8C1F7129E4007C094A /* PAM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF48B8B1F7129E4007C094A /* PAM.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		3E0FBD3120689116007C8FD5 /* SHA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
+		3E667B4E20C8F53B00FF3970 /* Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
 		3EBD38C21F4AEF5B00D019C0 /* pamservices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pamservices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBD38C51F4AEF5B00D019C0 /* pamservices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pamservices.h; sourceTree = "<group>"; };
 		3EBD38C61F4AEF5B00D019C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				3EBD38C61F4AEF5B00D019C0 /* Info.plist */,
 				3EBD38C51F4AEF5B00D019C0 /* pamservices.h */,
 				3EF48B8B1F7129E4007C094A /* PAM.swift */,
+				3E667B4E20C8F53B00FF3970 /* Description.swift */,
 			);
 			path = pamservices;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				3EF48B8C1F7129E4007C094A /* PAM.swift in Sources */,
 				3EF48B901F712A52007C094A /* FingerPrint.swift in Sources */,
 				3E0FBD3220689116007C8FD5 /* SHA1.swift in Sources */,
+				3E667B4F20C8F53B00FF3970 /* Description.swift in Sources */,
 				3EF48B941F712AA0007C094A /* PAMLocalDatabase.swift in Sources */,
 				3EF48B8E1F712A0B007C094A /* PAMClient.swift in Sources */,
 			);

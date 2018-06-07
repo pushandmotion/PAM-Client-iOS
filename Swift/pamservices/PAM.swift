@@ -7,6 +7,7 @@
 //
 
 public class PAM {
+    
     class func defaultTrackingData() -> TrackingDataBuilder {
         var defaultData: TrackingDataBuilder? = nil
         let lockQueue = DispatchQueue(label: "self")
@@ -81,6 +82,8 @@ public class PAM {
             defaultData?.sid = sid
         }
         self.defaultPAMClient().pamUrl = pamUrl
+        
+        print("PAM Client v.\(Description.version)")
     }
     
     public class func defaultPAMClient() -> PAMClient {
