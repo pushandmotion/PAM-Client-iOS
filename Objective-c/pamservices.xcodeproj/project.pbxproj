@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E667B5220C8F5AD00FF3970 /* Description.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E667B5020C8F5AD00FF3970 /* Description.h */; };
+		3E667B5320C8F5AD00FF3970 /* Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E667B5120C8F5AD00FF3970 /* Description.m */; };
 		3E7922AA20637A020004FE75 /* TrackingDataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF707B1F62704E0086F87A /* TrackingDataBuilder.m */; };
 		3EA839A71F70DC590003F985 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA839A61F70DC590003F985 /* libsqlite3.tbd */; };
 		3EA839CC1F70E7C20003F985 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA839CB1F70E7C20003F985 /* UIKit.framework */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E667B5020C8F5AD00FF3970 /* Description.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Description.h; sourceTree = "<group>"; };
+		3E667B5120C8F5AD00FF3970 /* Description.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Description.m; sourceTree = "<group>"; };
 		3EA839A61F70DC590003F985 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3EA839CB1F70E7C20003F985 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3ECF70591F626FB00086F87A /* pamservices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pamservices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +100,8 @@
 				3ECF705D1F626FB00086F87A /* Info.plist */,
 				3ECF70661F626FE50086F87A /* PAM.h */,
 				3ECF70671F626FE50086F87A /* PAM.m */,
+				3E667B5020C8F5AD00FF3970 /* Description.h */,
+				3E667B5120C8F5AD00FF3970 /* Description.m */,
 			);
 			path = pamservices;
 			sourceTree = "<group>";
@@ -133,6 +139,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E667B5220C8F5AD00FF3970 /* Description.h in Headers */,
 				3ED4BFCF20AD65F6005732B5 /* Form.h in Headers */,
 				3ECF705E1F626FB00086F87A /* pamservices.h in Headers */,
 				3ECF707C1F62704E0086F87A /* TrackingDataBuilder.h in Headers */,
@@ -218,6 +225,7 @@
 				3ECF706D1F626FF10086F87A /* TrackingData.m in Sources */,
 				3E7922AA20637A020004FE75 /* TrackingDataBuilder.m in Sources */,
 				3ECF70691F626FE50086F87A /* PAM.m in Sources */,
+				3E667B5320C8F5AD00FF3970 /* Description.m in Sources */,
 				3ED4BFD020AD65F6005732B5 /* Form.m in Sources */,
 				3ECF70791F6270140086F87A /* PAMClient.m in Sources */,
 				3ECF70711F626FFA0086F87A /* PAMLocalDataBase.m in Sources */,

@@ -10,6 +10,7 @@
 #import "PAMLocalDataBase.h"
 #import "PAMClient.h"
 #import "Form.h"
+#import "Description.h"
 
 @implementation PAM
 
@@ -82,6 +83,8 @@
     }
    
     [self defaultPAMClient].pamUrl = pamUrl;
+    
+    NSLog(@"PAM Client v.%@", Description.version );
 }
 
 +(PAMClient*)defaultPAMClient{
