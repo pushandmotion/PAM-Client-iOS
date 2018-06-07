@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "TrackingDataBuilder.h"
 #import "TrackingData.h"
+#import "Form.h"
 
 @interface PAM : NSObject
 
@@ -21,6 +22,6 @@
 +(void)trackPageViewWithPagename:(NSString*)pageName;
 +(void)trackPageViewWithData:(TrackingData*)data;
 +(void)trackPageViewWithPagename:(NSString*)pageName data:(TrackingData*)data;
-
++(void)submitForm:(Form*)form;
 
 @end
