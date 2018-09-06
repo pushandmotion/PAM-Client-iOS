@@ -24,4 +24,7 @@
 +(void)trackPageViewWithPagename:(NSString*)pageName data:(TrackingData*)data;
 +(void)submitForm:(Form*)form;
 
++(BOOL)debugMode;
++(void)setDebuigMode:(BOOL)enabled;
+
 @end

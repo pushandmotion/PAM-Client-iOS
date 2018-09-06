@@ -15,13 +15,17 @@
 
 -(void)trackPageView:(TrackingData*)data{
     NSString *url = [self createEventURL:@"rest/event"];
-    //NSLog(@"PAM >> SEND TRACK url=%@ MTC_ID = %@",url,data.mtc_id);
+    if( PAM.debugMode ){
+        NSLog(@"PAM >> SEND TRACK url=%@ MTC_ID = %@",url,data.mtc_id);
+    }
     [self postTo:url data:[data toDictionary]];
 }
 
 -(void)trackCustomField:(TrackingData*)data customField:(NSDictionary*)customField{
     NSString *url = [self createEventURL:@"rest/event"];
-   //NSLog(@"PAM >> SEND TRACK url=%@ MTC_ID = %@",url,data.mtc_id);
+     if( PAM.debugMode ){
+         NSLog(@"PAM >> SEND TRACK url=%@ MTC_ID = %@",url,data.mtc_id);
+     }
     NSMutableDictionary *mDict = [[NSMutableDictionary alloc] initWithDictionary:[data toDictionary]];
     for(id key in customField){
         [mDict setObject:key forKey:customField[key]];
@@ -45,7 +49,11 @@
     if( result[@"id"] != nil ){
         mtc_id = result[@"id"];
         [PAM defaultTrackingData].mtc_id = mtc_id;
-        //NSLog(@"PAM >>> Set mtc_id = %@" ,mtc_id );
+        
+         if( PAM.debugMode ){
+             NSLog(@"PAM >>> Set mtc_id = %@" ,mtc_id );
+         }
+        
     }
     
     if( result[@"sid"] != nil ){
@@ -74,11 +82,15 @@
     
     NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithRequest:urlRequest completionHandler:^(NSData *responseData, NSURLResponse *response, NSError *error) {
         
-        //NSString* newStr = [NSString stringWithUTF8String:[responseData bytes]];
-        //NSLog(@"PAM >>> Track Complete : %@",newStr);
+         if( PAM.debugMode ){
+             NSString* newStr = [NSString stringWithUTF8String:[responseData bytes]];
+             NSLog(@"PAM >>> Track Complete : %@",newStr);
+         }
         
         if(error != nil ){
-            //NSLog(@"%@", error.localizedDescription );
+             if( PAM.debugMode ){
+                 NSLog(@"%@", error.localizedDescription );
+             }
             return;
         }
         

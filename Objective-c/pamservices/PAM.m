@@ -13,6 +13,16 @@
 
 @implementation PAM
 
+ static BOOL debug = false;
+
++(BOOL)debugMode{
+    return debug;
+}
+
++(void)setDebuigMode:(BOOL)enabled{
+    debug = enabled;
+}
+
 +(TrackingDataBuilder*)defaultTrackingData{
     static TrackingDataBuilder *defaultData = nil;
     @synchronized(self) {
